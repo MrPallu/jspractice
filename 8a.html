@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html></html>
+<body>
+    <script>
+        const item = {
+            product1 : {
+            name : 'basketball',
+            price : 2095,
+            ['delivery-time']: 3
+            },
+            product2 : {            
+            name : 'basketball',
+            price : 2095,
+            ['delivery-time']: 3
+            },
+            func: function comparePrice(product1,product2){
+                if(product1.price<product2.pric){
+                    return product1.price;
+                }
+                else{
+                    return product2.price;
+                }
+            },
+            func2: function isSameProduct(product1,product2){
+                if(product1==product2){
+                    return true;
+                }
+                return false;
+            }
+
+        }
+      /* * */  console.log(item.func(item.product1,item.product2));
+      
+    </script>
+</body>

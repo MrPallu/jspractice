@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RockPaperScissor</title>
+        <link rel='stylesheet' href="general.css">
+    </head>
+    <body>
+        <p class="header">Rock Paper Scissors</p>
+
+        <button class="rock-button" onclick="
+            let computerMove = '';
+            let randomNumber = Math.random();
+            let result='';
+            if(randomNumber>=0 && randomNumber<1/3){
+                computerMove = 'rock';
+            }
+            else if(randomNumber>=1/3 && randomNumber<2/3)
+            {
+                computerMove = 'paper';
+            }
+            else if(randomNumber>=2/3 && randomNumber<1)
+            {
+                computerMove = 'scissor';
+            }
+            console.log(computerMove);
+            if(computerMove==='rock'){
+                result = 'Tie';
+            }
+            else if(computerMove==='paper'){
+                result = 'Computer Wins';
+            }
+            else if(computerMove==='scissor'){
+                result = 'You Win';
+            }
+
+            alert(`You picked rock. Computer picked ${computerMove}. ${result}.`);
+
+
+        "><p class="emoji">&#x270A;</p><p class="move-txt">Rock</p ></button>
+        <button class="paper-button" onclick="
+            computerMove = '';
+            randomNumber = Math.random();
+            result='';
+            if(randomNumber>=0 && randomNumber<1/3){
+                computerMove = 'rock';
+            }
+            else if(randomNumber>=1/3 && randomNumber<2/3)
+            {
+                computerMove = 'paper';
+            }
+            else if(randomNumber>=2/3 && randomNumber<1)
+            {
+                computerMove = 'scissor';
+            }
+            console.log(computerMove);
+            if(computerMove==='rock'){
+                result = 'You Win';
+            }
+            else if(computerMove==='paper'){
+                result = 'Tie';
+            }
+            else if(computerMove==='scissor'){
+                result = 'Computer Wins';
+            }
+
+            alert(`You picked paper. Computer picked ${computerMove}. ${result}.`);
+
+
+        "><p class="emoji">&#9995;</p><p class="move-txt">Paper</p></button>
+        <button class="scissors-button" onclick="
+            computerMove = '';
+            randomNumber = Math.random();
+            result='';
+            if(randomNumber>=0 && randomNumber<1/3){
+                computerMove = 'rock';
+            }
+            else if(randomNumber>=1/3 && randomNumber<2/3)
+            {
+                computerMove = 'paper';
+            }
+            else if(randomNumber>=2/3 && randomNumber<1)
+            {
+                computerMove = 'scissor';
+            }
+            console.log(computerMove);
+            if(computerMove==='rock'){
+                result = 'Computer Wins';
+            }
+            else if(computerMove==='paper'){
+                result = 'You Win';
+            }
+            else if(computerMove==='scissor'){
+                result = 'Tie';
+            }
+
+            alert(`You picked scissors. Computer picked ${computerMove}. ${result}.`);
+        "><p class="emoji">&#x270C;</p><p class ="move-txt">Scissors</p></button>
+        <script>
+
+        </script>
+    </body>
+</html>

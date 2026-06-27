@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button onclick="
+           guess='heads';
+           playGame(guess)
+           ">heads</button>
+        <button onclick="
+           guess='tails';
+           playGame(guess)
+           ">tails</button>
+        <script>
+
+            /**/ 
+            let score = JSON.parse(localStorage.getItem('score')) || {
+                wins:0,
+                losses:0
+            };
+            function playGame(guess){
+            let randomNumber = Math.random();
+            let result = '';
+
+            if(randomNumber<0.5){
+                result='heads';
+            }
+            else{
+                result='tails';
+            }
+
+
+            result===guess ? score.wins+=1 : score.losses+=1;
+            console.log(`Wins:${score.wins} Losses:${score.losses}`);
+            localStorage.setItem('score',JSON.stringify(score));
+            }
+
+        </script>
+    </body>
+</html>
