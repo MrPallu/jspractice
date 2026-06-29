@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input placeholder="Name" class="js-textbox" onkeydown="
+            if(event.key==='Enter'){
+                submitName();} ">
+        <button onclick="
+                submitName();
+            " >Submit</button>
+            <p class="js-content"></p>
+        <script>
+            function submitName(){
+            const txtBox = document.querySelector('.js-textbox');
+            let content = txtBox.value;
+            document.querySelector('.js-content')
+                .innerHTML=`Your name is : ${content}`;
+            }
+        </script>
+    </body>
+</html>

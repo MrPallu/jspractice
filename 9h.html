@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input placeholder="Type something" class="js-txtbox" onkeyup="
+            updateTxt();
+              ">
+        <p class="js-content"></p>
+        <script>
+            function updateTxt(){
+                const txtBox = document.querySelector('.js-txtbox');
+                let content = txtBox.value;
+                document.querySelector('.js-content').innerHTML=`${content}`;
+            }
+        </script>
+    </body>
+</html>
